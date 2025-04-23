@@ -1,6 +1,4 @@
-﻿using System;
-using Microsoft.Maui.Controls;
-
+﻿
 namespace CalculadoraBásica;
 
 public partial class MainPage : ContentPage

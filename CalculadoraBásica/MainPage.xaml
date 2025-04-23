@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Calculadora"
+             x:Class="CalculadoraBásica.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label Text="Número 1" 
+                   Margin="0,30,0,0"/>
+            <Entry x:Name="Num1Entry"
+                   Keyboard="Numeric"
+                   Placeholder="Digite o primeiro número: " />
+
+            <Label Text="Número 2" />
+            <Entry x:Name="Num2Entry"
+                   Keyboard="Numeric"
+                   Placeholder="Digite o segundo número: " />
+
+            <Label Text="Selecione uma opção:" />
+            <Picker x:Name="OperacaoEscolhida" >
+                <Picker.Items>
+                    <x:String> Somar </x:String>
+                    <x:String> Subtrair </x:String>
+                    <x:String> Multiplicar </x:String>
+                    <x:String> Dividir </x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Button Text="Calcular"
+                    Clicked="OnCalcularCliked" />
+
+            <Frame BorderColor="LightGray"
+                   BackgroundColor="#F0F0F0"
+                   CornerRadius="10"
+                   Padding="10"
+                   HasShadow="True"
+                   Margin="0, 20, 0, 0" >
+
+                <Label x:Name="ResultadoLabel"
+                       Text="Resultado: "
+                       FontSize="15"
+                       TextColor="DarkBlue"
+                       HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center" />
+
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
